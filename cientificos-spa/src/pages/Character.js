@@ -6,11 +6,11 @@ const Character =  async () => {
     const id = getHash();
     const character = await getData(id);
     const view = `
-        <div class="container-fluid mt-2">
+        <div class="container-fluid mt-2" style="min-height: 80vh;">
             <div class="row">
                 <div class="col-md-6 mb-2">
                     <div class="card">
-                        <img src="${character.image}" class="card-img-top" alt="${character.name}" style="max-width: 100%; max-height: 450px; object-fit: cover;">
+                        <img src="${character.image}" class="card-img-top" alt="${character.name}" style="max-width: 100%; max-height: 440px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">${character.name}</h5>
                         </div>
