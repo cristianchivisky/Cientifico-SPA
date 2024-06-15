@@ -2,6 +2,12 @@
 
 Científico-SPA es una aplicación que muestra información sobre personajes de la serie Rick and Morty. Esta aplicación está construida utilizando Webpack, JavaScript y Bootstrap.
 
+## Demo en Vivo
+
+Puedes ver la aplicación desplegada en Netlify en el siguiente enlace:
+
+[Demo en Vivo en Netlify](https://gentle-kleicha-96d434.netlify.app/)
+
 ## Características
 
 - Búsqueda de personajes por nombre.
