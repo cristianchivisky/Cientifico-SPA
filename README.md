@@ -48,7 +48,7 @@ Puedes ver la aplicación desplegada en Netlify en el siguiente enlace:
 2. Inicia el servidor de desarrollo:
 
     ```bash
-    npm start
+    npm run start
     ```
 
 3. Abre tu navegador y navega a `http://localhost:8080` para ver la aplicación.
