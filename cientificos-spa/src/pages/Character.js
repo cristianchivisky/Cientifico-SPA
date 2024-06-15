@@ -6,21 +6,34 @@ const Character =  async () => {
     const id = getHash();
     const character = await getData(id);
     const view = `
-        <div class="Characters-inner">
-            <article class="Character-card">
-                <img src="${character.image}" alt="${character.name}">
-                <h2>${character.name}</h2>
-            </article>
-
-            <article class="Characters-card">
-                <h3>Episodes: <span>${character.episode.length}</span></h3>
-                <h3>Status:<span>${character.status}</span></ </h3>
-                <h3>Species: <span>${character.species}</span></</h3>
-                <h3>Gender: <span>${character.gender}</span></</h3>
-                <h3>Origin: <span>${character.origin.name}</span></</h3>
-                <h3>Last Location: <span>${character.location.name}</span></</h3>
-            </article>
-        </div> 
+        <div class="container-fluid mt-2">
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <div class="card">
+                        <img src="${character.image}" class="card-img-top" alt="${character.name}" style="max-width: 100%; max-height: 450px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">${character.name}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Character Details</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Episodes: <span>${character.episode.length}</span></li>
+                                <li class="list-group-item">Status: <span>${character.status}</span></li>
+                                <li class="list-group-item">Species: <span>${character.species}</span></li>
+                                <li class="list-group-item">Gender: <span>${character.gender}</span></li>
+                                <li class="list-group-item">Origin: <span>${character.origin.name}</span></li>
+                                <li class="list-group-item">Last Location: <span>${character.location.name}</span></li>
+                            </ul>
+                            <button class="btn btn-secondary mt-3" onclick="history.back()">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     `
     return view
 };

@@ -1,4 +1,6 @@
 import router from './src/routes';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);

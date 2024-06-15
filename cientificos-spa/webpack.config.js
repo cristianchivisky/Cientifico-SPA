@@ -19,7 +19,24 @@ exclude: /node_modules/, // Excluimos la carpeta de node_modules
 use: {
 loader: 'babel-loader', // Utilizar un loader como configuración establecida
 }
-}
+},
+{
+test: /\.css$/,
+use: ['style-loader', 'css-loader'],
+},
+{
+    test: /\.(png|jpe?g|gif|svg)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'img/',
+          publicPath: 'img/',
+        },
+      },
+    ],
+},
 ]
 },
 plugins: [
@@ -38,5 +55,10 @@ to: ''
 }
 ]
 })
-]
+],
+devServer: {
+    static: path.join(__dirname, 'public'),
+    compress: true,
+    port: 8080,
+},
 }
