@@ -2,9 +2,9 @@ import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 
 const Character =  async () => {
-
-    const id = getHash();
-    const character = await getData(id);
+    const id = getHash(); // Get the current character ID from the URL hash
+    const character = await getData(id, null); // Fetch character data using the ID
+    // Create a template for the character details view
     const view = `
         <div class="container-fluid mt-2" style="min-height: 80vh;">
             <div class="row">

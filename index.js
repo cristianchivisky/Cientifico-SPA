@@ -5,18 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
 
-/**Cuando un usuario accede a la aplicación, el navegador carga el index.html.
-El styles.css se aplica a la estructura HTML definida en index.html para darle estilo.
-El JavaScript en index.js se ejecuta y establece escuchadores de eventos para 'load' y 'hashchange'.
-Cuando el usuario cambia la URL o carga la página, se dispara el evento 'hashchange', lo que activa la función router en index.js.
-La función router utiliza las utilidades getHash y getResolveRoutes para determinar la ruta actual.
-Luego, busca en el objeto de rutas para encontrar el componente adecuado (por ejemplo, Home, Character o Error404) y actualiza la vista.
-Si la URL no coincide con ninguna ruta definida, se muestra la página de error (Error404).
-El componente Header se usa para generar el contenido del encabezado de la página.
-getData.js se utiliza para obtener datos de personajes desde la API cuando sea necesario.
-Los estilos definidos en styles.css se aplican a los elementos HTML para darle a la aplicación su aspecto visual.
-
-En resumen, la aplicación utiliza JavaScript para habilitar el enrutamiento del lado del cliente y para cargar 
-dinámicamente diferentes componentes de acuerdo con la URL actual. Las utilidades en utils proporcionan funcionalidad
-esencial para gestionar rutas y obtener datos. Los estilos definidos en styles.css dan forma al aspecto visual de la
-aplicación, y Webpack se encarga de empaquetar y optimizar los activos. */
+/**
+ * When a user accesses the application, the browser loads the index.html file.
+ * The Bootstrap CSS is applied to the HTML structure for styling.
+ * JavaScript in index.js sets up event listeners for 'load' and 'hashchange'.
+ * When the user changes the URL or reloads the page, the 'hashchange' event triggers the router function.
+ * The router function uses utilities like getHash and resolveRoutes to determine the current route.
+ * It looks up the route in the routes object to find the appropriate component (e.g., Home, Character, or Error404) and updates the view.
+ * If the URL doesn't match any defined routes, the error page (Error404) is displayed.
+ * The Header component is used to generate the page header content.
+ * getData.js fetches character data from the API when needed.
+ * Bootstrap styles are applied to the HTML elements for the application's visual appearance.
+ *
+ * In summary, the application uses JavaScript for client-side routing and dynamically loads components based on the current URL. 
+ * Utilities in utils manage routes and fetch data. Bootstrap provides the application's visual styling.
+ */
