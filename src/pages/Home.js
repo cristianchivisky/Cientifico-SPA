@@ -135,7 +135,7 @@ const Home = async () => {
     };
     
     const view = `
-    <div class="container-fluid">
+    <div class="container-fluid d-flex flex-column min-vh-100">
         <div class="card p-0 m-0 mt-1 mb-3">
             <img src="${logo}" class="img-fluid" alt="...">
         </div>
